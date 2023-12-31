@@ -11,3 +11,13 @@ for a in *.sh
 do
     ls -la "$a"
 done
+
+
+# getting array.sh file content
+
+
+file="array.sh"
+for b in $(cat $file)
+do
+    echo "Name $b"
+done

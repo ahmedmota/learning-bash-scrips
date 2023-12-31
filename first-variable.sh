@@ -14,11 +14,11 @@ readonly fullname="moosa mota"
 
 #asking to questions 
 
-echo "what is your age?" 
+#echo "what is your age?" 
 
-read age 
+read -p "what is your age ?" age 
 
-echo "my age is${age}" 
+echo "my age is ${age}" 
 
 #implement convo 
 
