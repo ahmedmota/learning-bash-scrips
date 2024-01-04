@@ -7,7 +7,7 @@ Echo "my name is ahmed"
 name="ahmed hamid" 
 
   
-echo "my name is ${name}" 
+echo "my name is $name" 
 
 #to make varible read only
 readonly fullname="moosa mota"
@@ -18,12 +18,12 @@ readonly fullname="moosa mota"
 
 read -p "what is your age ?" age 
 
-echo "my age is ${age}" 
+echo "my age is $age" 
 
 #implement convo 
 
-echo "my name is ${name}" 
+echo "my name is $name" 
 
 sleep 2 
 
-echo "my age is ${age}" 
+echo "my age is $age" 

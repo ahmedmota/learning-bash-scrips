@@ -1,0 +1,8 @@
+#!/bin/bash
+
+ls -la | awk '{print $2 " " $3 " " $4 " " $9}' | while read output;
+do
+    if [[ $output -ge 2 ]]
+    echo " ALERT PERMISSION OF FILE IS : $output "
+    fi
+done
