@@ -2,6 +2,7 @@
 
 alert=20
 
+backup_date=$(date +'%m/%d/%Y/%H:%M:%S')
 df -H | awk '{print $5 " " $1}' | while read output;
 do
 
@@ -11,6 +12,6 @@ file_system=$(echo $output | awk '{print $2}')
 
 if [[ $file_usage -ge $alert ]]
 then
-        echo "critical for file usage above 20% $file_system"
+        echo "critical for file usage above 20% $file_system on date $backup_date"
 fi
 done
