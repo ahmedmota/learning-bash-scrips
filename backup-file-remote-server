@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# host source directory or file to backup
+src_dir=/path/to/src/folder
+
+# host destination of a backup folder 
+tgt_dir=/path/to/backup/folder
+
+# to print date and time
+
+curr_time=$(date "+%Y-%m-%d:%H-%M-%S")
+
+# to create backup from host src folder to backup folder
+backup_file=$tgt_dir/$curr_time.tgz
+
+# create compress folder on host backup folder
+tar -czvf $backup_file $src_dir
+
+# to transfer host backup folder to remote backup server
+rsync -azve ssh $backup_file username@remote-ip-addres:/remote/dest/folder
+
+# to remove host backup folder
+rm $backup_file
